@@ -1,0 +1,16 @@
+<RCC>
+    <qresource prefix="/Resimler">
+        <file alias="Birim.png">Resimler/Birim.png</file>
+        <file alias="Birim1.png">Resimler/Birim2.png</file>
+        <file alias="BirimEkle.png">Resimler/BirimEkle.png</file>
+        <file alias="BirimSil.png">Resimler/BirimSil.png</file>
+        <file alias="Documents.png">Resimler/Documents.png</file>
+        <file alias="Iptal.png">Resimler/Iptal.png</file>
+        <file alias="Iptal2.png">Resimler/Iptal2.png</file>
+        <file alias="Kaydet.png">Resimler/Kaydet1.png</file>
+        <file alias="Kaydet1.png">Resimler/Kaydet2.png</file>
+        <file alias="People.png">Resimler/People.png</file>
+        <file alias="Birim48.png">Resimler/Birim3.png</file>
+        <file alias="People48.png">Resimler/People2.png</file>
+    </qresource>
+</RCC>
