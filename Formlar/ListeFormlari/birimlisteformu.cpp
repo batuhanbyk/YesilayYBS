@@ -6,6 +6,9 @@
 #include<QSize>
 #include<Veri/VeriSiniflari/birim.h>
 #include<Veri/VeriDepolari/birimdeposu.h>
+#include<Islemler/islemdeposu.h>
+#include<Islemler/VeriSilme/birimsilmeislemii.h>
+
 BirimListeFormu::BirimListeFormu(BirimDeposu &depo,QWidget *parent) :
     QWidget(parent),
     ui(new Ui::BirimListeFormu),_depo(depo)
@@ -32,9 +35,9 @@ void BirimListeFormu::setListe(const BirimListesi &newListe)
 void BirimListeFormu::ekranGuncelle()
 {
     ui->tblBirimListesi->clear();
-    ui->tblBirimListesi->setColumnCount(4);
+    ui->tblBirimListesi->setColumnCount(5);
     QStringList Basliklar;
-    Basliklar << tr("Birim Adi") << tr("Birim Kodu") << tr("Birim Adresi") << tr("Telefon Numarasi");
+    Basliklar << tr("Birim Adi") << tr("Birim Kodu") << tr("Birim Adresi") << tr("Telefon Numarasi")<<  tr("Veri Sil");
     ui->tblBirimListesi->setHorizontalHeaderLabels(Basliklar);
     ui->tblBirimListesi->setRowCount(_liste.size());
     for (int i=0;i<_liste.size();i++ ) {
@@ -51,6 +54,20 @@ void BirimListeFormu::ekranGuncelle()
         hucre = new QTableWidgetItem;
         hucre->setText(nesne_i->birimIletisim());
         ui->tblBirimListesi->setItem(i,3,hucre);
+
+        auto silmeButonu = new QPushButton();
+        silmeButonu->setText("Sil");
+        /*connect(silmeButonu, &QPushButton::clicked,IslemDeposu::v1vv().getAction(IslemDeposu::IslemSaglikOcagiSil),&QAction::trigger);*/
+        connect(silmeButonu,&QPushButton::clicked,[nesne_i](){
+            auto islem1 = IslemDeposu::v1vv().getIslem(IslemDeposu::IslemSaglikOcagiSil);
+            auto islem2 = std::dynamic_pointer_cast<BirimSilmeIslemii>(islem1); //Temel veri islemini BirimSil islemine donusturur.
+            //std::reinterpret_pointer_cast(); //Tum temel veri islemindeki pointerlar cocuk siniflara cast edilebilirler(casting).
+            islem2->setVeri(nesne_i);
+            islem2-> main();
+        });
+
+        ui->tblBirimListesi->setCellWidget(i, 4, silmeButonu);
+        //trigger sinyalin adi triggered slotun
     }
 }
 

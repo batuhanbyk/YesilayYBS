@@ -1,4 +1,4 @@
-    #include "gozetmenverigirisi.h"
+#include "gozetmenverigirisi.h"
 #include "ui_gozetmenverigirisi.h"
 
 GozetmenVeriGirisi::GozetmenVeriGirisi(QWidget *parent) :
@@ -6,6 +6,7 @@ GozetmenVeriGirisi::GozetmenVeriGirisi(QWidget *parent) :
     ui(new Ui::GozetmenVeriGirisi)
 {
     ui->setupUi(this);
+    connect(ui->btnKaydet,SIGNAL(clicked()),this,SIGNAL(veriKaydet()));
 }
 
 GozetmenVeriGirisi::~GozetmenVeriGirisi()
@@ -20,9 +21,13 @@ void GozetmenVeriGirisi::ekranGuncelle()
     ui->leSoyadi->setText(_veri->soyad());
     ui->leTc->setText(_veri->tcKimlik());
     ui->spnSicilNo->setValue(_veri->sicilNo());
-    /*ui->deDogumTarihi->setDate(_veri->dogumTarihi());*/
-    ui->rbErkek->setChecked(_veri->cinsiyeti());
-    ui->rbKadin->setChecked(_veri->cinsiyeti());
+    ui->deDogumTarihi->setDate(_veri->dogumTarihi1());
+    if(ui->rbErkek->isChecked()==true){
+        _veri->setCinsiyeti(Erkek);
+    }
+    if(ui->rbKadin->isChecked()==true){
+        _veri->setCinsiyeti(Kadin);
+    }
 }
 
 void GozetmenVeriGirisi::veriGuncelle()
@@ -30,7 +35,12 @@ void GozetmenVeriGirisi::veriGuncelle()
     _veri->setAd(ui->leAdi->text());
     _veri->setSoyad(ui->leSoyadi->text());
     _veri->setSicilNo(ui->spnSicilNo->value());
-   /* _veri->setCinsiyeti(ui->rbErkek->text());*/
-   /* _veri->setCinsiyeti(ui->rbKadin->text());*/
-    /*_veri->setDogumTarihi(ui->deDogumTarihi->date());*/
+    _veri->setTcKimlik(ui->leTc->text());
+    if(_veri->cinsiyeti()==Erkek){
+        ui->rbErkek->setChecked(true);
+    }
+    if(_veri->cinsiyeti()==Kadin){
+        ui->rbKadin->setChecked(true);
+    }
+    _veri->setDogumTarihi1(ui->deDogumTarihi->date());
 }

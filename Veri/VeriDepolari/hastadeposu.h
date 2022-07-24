@@ -5,7 +5,7 @@
 #include"TemelVeriDeposu.h"
 #include<Veri/VeriSiniflari/hasta.h>
 
-class HastaDeposu : public QObject,public TemelVeriDeposu<HastaDeposu>
+class HastaDeposu : public QObject,public TemelVeriDeposu<Hasta>
 {
     Q_OBJECT
 public:

@@ -24,6 +24,10 @@ private:
 public:
     void ekranGuncelle() override;
     void veriGuncelle() override;
+
+    void baslikAta(QString baslik);
+signals:
+    void veriKaydet();
 };
 
 #endif // HASTAVERIGIRISI_H

@@ -31,7 +31,7 @@
     <string>Yeni Psikiyatr Girisi</string>
    </property>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>70</x>
@@ -41,22 +41,15 @@
     </rect>
    </property>
    <layout class="QGridLayout" name="gridLayout_3">
-    <item row="0" column="0">
-     <widget class="QLabel" name="lblTc_2">
+    <item row="4" column="2">
+     <widget class="QRadioButton" name="rbKadin_2">
       <property name="font">
        <font>
         <pointsize>20</pointsize>
        </font>
       </property>
       <property name="text">
-       <string>T.C Kimlik No</string>
-      </property>
-     </widget>
-    </item>
-    <item row="0" column="1">
-     <widget class="QLineEdit" name="leTc_2">
-      <property name="text">
-       <string/>
+       <string>Kadin</string>
       </property>
      </widget>
     </item>
@@ -72,10 +65,63 @@
       </property>
      </widget>
     </item>
-    <item row="1" column="1">
-     <widget class="QLineEdit" name="leAdi_2">
+    <item row="3" column="1">
+     <widget class="QDateEdit" name="deDogumTarihi_2">
+      <property name="font">
+       <font>
+        <pointsize>20</pointsize>
+       </font>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="1">
+     <widget class="QSpinBox" name="spnSicilNo">
+      <property name="font">
+       <font>
+        <pointsize>20</pointsize>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="buttonSymbols">
+       <enum>QAbstractSpinBox::NoButtons</enum>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="0">
+     <widget class="QLabel" name="lblSicilNo">
+      <property name="font">
+       <font>
+        <pointsize>20</pointsize>
+       </font>
+      </property>
       <property name="text">
-       <string/>
+       <string>Sicil No</string>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="1">
+     <widget class="QRadioButton" name="rbErkek_2">
+      <property name="font">
+       <font>
+        <pointsize>20</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Erkek</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="0">
+     <widget class="QLabel" name="lblTc_2">
+      <property name="font">
+       <font>
+        <pointsize>20</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>T.C Kimlik No</string>
       </property>
      </widget>
     </item>
@@ -91,50 +137,19 @@
       </property>
      </widget>
     </item>
-    <item row="2" column="1">
-     <widget class="QLineEdit" name="leSoyadi_2">
+    <item row="6" column="1" colspan="2">
+     <widget class="QLineEdit" name="leAlani">
+      <property name="font">
+       <font>
+        <pointsize>20</pointsize>
+       </font>
+      </property>
       <property name="text">
        <string/>
       </property>
      </widget>
     </item>
-    <item row="3" column="0">
-     <widget class="QLabel" name="lblHes_2">
-      <property name="font">
-       <font>
-        <pointsize>20</pointsize>
-       </font>
-      </property>
-      <property name="text">
-       <string>Oykusu</string>
-      </property>
-     </widget>
-    </item>
-    <item row="3" column="1" colspan="2">
-     <widget class="QTextEdit" name="teOykusu_2"/>
-    </item>
     <item row="4" column="0">
-     <widget class="QLabel" name="lblDogumTarihi_2">
-      <property name="font">
-       <font>
-        <pointsize>20</pointsize>
-       </font>
-      </property>
-      <property name="text">
-       <string>Dogum Tarihi</string>
-      </property>
-     </widget>
-    </item>
-    <item row="4" column="1">
-     <widget class="QDateEdit" name="deDogumTarihi_2">
-      <property name="font">
-       <font>
-        <pointsize>20</pointsize>
-       </font>
-      </property>
-     </widget>
-    </item>
-    <item row="5" column="0">
      <widget class="QLabel" name="lblCinsiyeti_2">
       <property name="font">
        <font>
@@ -146,58 +161,40 @@
       </property>
      </widget>
     </item>
-    <item row="5" column="1">
-     <widget class="QRadioButton" name="rbErkek_2">
-      <property name="font">
-       <font>
-        <pointsize>20</pointsize>
-       </font>
-      </property>
+    <item row="0" column="1">
+     <widget class="QLineEdit" name="leTc_2">
       <property name="text">
-       <string>Erkek</string>
+       <string/>
       </property>
      </widget>
     </item>
-    <item row="5" column="2">
-     <widget class="QRadioButton" name="rbKadin_2">
+    <item row="3" column="0">
+     <widget class="QLabel" name="lblDogumTarihi_2">
       <property name="font">
        <font>
         <pointsize>20</pointsize>
        </font>
       </property>
       <property name="text">
-       <string>Kadin</string>
+       <string>Dogum Tarihi</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="1">
+     <widget class="QLineEdit" name="leSoyadi_2">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="1">
+     <widget class="QLineEdit" name="leAdi_2">
+      <property name="text">
+       <string/>
       </property>
      </widget>
     </item>
     <item row="6" column="0">
-     <widget class="QLabel" name="lblSicilNo">
-      <property name="font">
-       <font>
-        <pointsize>20</pointsize>
-       </font>
-      </property>
-      <property name="text">
-       <string>Sicil No</string>
-      </property>
-     </widget>
-    </item>
-    <item row="6" column="1">
-     <widget class="QSpinBox" name="spnSicilNo">
-      <property name="font">
-       <font>
-        <pointsize>20</pointsize>
-       </font>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-      </property>
-      <property name="buttonSymbols">
-       <enum>QAbstractSpinBox::NoButtons</enum>
-      </property>
-     </widget>
-    </item>
-    <item row="7" column="0">
      <widget class="QLabel" name="lblAlani">
       <property name="font">
        <font>
@@ -209,21 +206,9 @@
       </property>
      </widget>
     </item>
-    <item row="7" column="1" colspan="2">
-     <widget class="QLineEdit" name="leAlani">
-      <property name="font">
-       <font>
-        <pointsize>20</pointsize>
-       </font>
-      </property>
-      <property name="text">
-       <string>Dogum Tarihi</string>
-      </property>
-     </widget>
-    </item>
    </layout>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>598</x>

@@ -1,7 +1,7 @@
 #include "hastadeposu.h"
 
 HastaDeposu::HastaDeposu(QObject *parent)
-    : QObject{parent},TemelVeriDeposu<HastaDeposu>{}
+    : QObject{parent},TemelVeriDeposu<Hasta>{}
 {
 
 }

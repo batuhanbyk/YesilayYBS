@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>PsikiyatrListeFormu</class>
+ <widget class="QWidget" name="PsikiyatrListeFormu">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1049</width>
+    <height>429</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QGroupBox" name="grpArama_2">
+   <property name="geometry">
+    <rect>
+     <x>320</x>
+     <y>10</y>
+     <width>161</width>
+     <height>171</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Arama Turu</string>
+   </property>
+   <widget class="QRadioButton" name="rbIleBaslayan">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>20</y>
+      <width>89</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>ile Baslayan</string>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="rbIleBiten">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>50</y>
+      <width>89</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>ile Biten</string>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="rbIceren">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>90</y>
+      <width>89</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Iceren</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="grpArama_3">
+   <property name="geometry">
+    <rect>
+     <x>520</x>
+     <y>10</y>
+     <width>271</width>
+     <height>171</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Arama Turu</string>
+   </property>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>40</y>
+      <width>81</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Arama Metni</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="leArama">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>80</y>
+      <width>201</width>
+      <height>22</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnAra">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>120</y>
+      <width>75</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>ARA</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="grpArama">
+   <property name="geometry">
+    <rect>
+     <x>140</x>
+     <y>10</y>
+     <width>161</width>
+     <height>171</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Alan Secimi</string>
+   </property>
+   <widget class="QRadioButton" name="rbPsikiyatrAdi">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>30</y>
+      <width>111</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Psikiyatr Adi</string>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="rbTumu">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>120</y>
+      <width>89</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Tümü</string>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="rbPsikiyatrSoyadi">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>60</y>
+      <width>131</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Psikiyatr Soyadi</string>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="rbPsikiyatrSicilNo">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>90</y>
+      <width>121</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Psikiyatr Sicil No</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QTableWidget" name="tblPsikiyatrListesi">
+   <property name="geometry">
+    <rect>
+     <x>130</x>
+     <y>200</y>
+     <width>731</width>
+     <height>211</height>
+    </rect>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>leArama</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>btnAra</receiver>
+   <slot>click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>590</x>
+     <y>100</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>587</x>
+     <y>136</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
