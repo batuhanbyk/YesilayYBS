@@ -11,10 +11,21 @@ class IslemDeposu : public QObject
 public:
     static IslemDeposu &v1vv();
     typedef enum{ IslemBirimGiris=0,
-                  IslemSaglikOcagiListe} IslemSirasi ;
+                  IslemSaglikOcagiListe,
+                  IslemSaglikOcagiSil,
+                  IslemGozetmenGiris,
+                  IslemGozetmenListe,
+                  IslemHastaGiris,
+                  IslemHastaListe,
+                  IslemPsikiyatristGiris,
+                  IslemPsikiyatristListe,
+                  IslemHastaSil,
+                  IslemHastaGuncelle} IslemSirasi ;
 
     QAction *getAction(IslemSirasi x);
     void calistir(IslemSirasi y);
+    std::shared_ptr<TemelKullaniciIslemi> getIslem(IslemSirasi z);
+
 private:
     explicit IslemDeposu(QObject *parent = nullptr);
     QList<std::shared_ptr<TemelKullaniciIslemi>> _islemler;

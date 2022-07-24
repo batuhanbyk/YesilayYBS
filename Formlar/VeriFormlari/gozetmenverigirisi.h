@@ -24,6 +24,8 @@ private:
 public:
     void ekranGuncelle() override;
     void veriGuncelle() override;
+signals:
+    void veriKaydet();
 };
 
 #endif // GOZETMENVERIGIRISI_H

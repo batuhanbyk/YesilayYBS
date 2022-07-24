@@ -21,7 +21,7 @@ public slots:
     void main() override;
     void depoEkle();
 private:
-QAction * _islem;
+ QAction *_islem;
 };
 
 #endif // BIRIMGIRISISLEMI_H

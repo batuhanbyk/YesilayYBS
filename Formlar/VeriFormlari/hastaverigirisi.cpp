@@ -6,6 +6,7 @@ HastaVeriGirisi::HastaVeriGirisi(QWidget *parent) :
     ui(new Ui::HastaVeriGirisi)
 {
     ui->setupUi(this);
+    connect(ui->btnKaydet,SIGNAL(clicked()),this,SIGNAL(veriKaydet()));
 }
 
 HastaVeriGirisi::~HastaVeriGirisi()
@@ -33,6 +34,7 @@ void HastaVeriGirisi::ekranGuncelle()
 
 void HastaVeriGirisi::veriGuncelle()
 {
+    _veri->setTcKimlik(ui->leTc->text());
     _veri->setAd(ui->leAdi->text());
     _veri->setSoyad(ui->leSoyadi->text());
     _veri->setOykusu(ui->teOykusu->toPlainText());
@@ -44,4 +46,9 @@ void HastaVeriGirisi::veriGuncelle()
         ui->rbKadin->setChecked(true);
     }
     _veri->setDogumTarihi1(ui->deDogumTarihi->date());
+}
+
+void HastaVeriGirisi::baslikAta(QString baslik)
+{
+    ui->lblBaslik->setText(baslik);
 }

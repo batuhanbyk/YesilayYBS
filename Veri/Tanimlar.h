@@ -12,7 +12,7 @@
 
 typedef QString Metin;
 typedef int Tamsayi;
-typedef enum { Kadin = 1, Erkek = 2 } Cinsiyet;
+typedef enum { Kadin = 0, Erkek = 1 } Cinsiyet;
 typedef QDate Tarih;
 typedef QTime Saat;
 typedef QDateTime TarihSaat;
@@ -44,7 +44,7 @@ typedef QList<BagimlilikTuruTeshisPtr> BagimlilikTuruTeshisListesi;
 typedef QList<SonucPtr> SonucListesi;
 typedef QList<BirimPtr> BirimListesi;
 
-class PsikiyatrDeposu;
+class PsikiyatristDeposu;
 class HastaDeposu;
 class GozetmenDeposu;
 class BirimDeposu;
